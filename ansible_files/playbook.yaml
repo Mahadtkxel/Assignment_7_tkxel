@@ -1,0 +1,10 @@
+---
+- name: Configure server with NGINX, Docker and Docker Compose and change Nginx port
+  hosts: all
+  become: true
+
+  roles:
+    - install_nginx
+    - install_docker
+    - docker_compose
+    - change_nginx_port
